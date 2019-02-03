@@ -15,11 +15,10 @@ export default class App extends React.Component {
     return (
        <View style={styles.container}>
        <ScrollView contentContainerStyle={{ flexGrow:1, flexDirection:'column'}}>
-        <LingoCard title={"Story"} backColor={"#fff"}/>
-        <LingoCard title={"Test"} backColor={"#fff"}/>
-        <LingoCard title={"Punctuation"} backColor={"#fff"}/>
-        <LingoCard title={"Reading"} backColor={"#fff"}/>
-        <LingoCard title={"Reading"} backColor={"#fff"}/>
+        <LingoCard title={"Story"} backColor={"#f20"}/>
+        <LingoCard title={"Test"} backColor={"#f3f3a5"}/>
+        <LingoCard title={"Punctuation"} backColor={"#123456"}/>
+        <LingoCard title={"Reading"} backColor={"#f34aec"}/>
         </ScrollView>
       </View>
     );
