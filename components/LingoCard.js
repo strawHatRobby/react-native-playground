@@ -8,15 +8,20 @@ export default class LingoCard extends Component {
     constructor(props){
     super(props);
     this.state = {
-        
+        pauseLottie: 0
     }
    this.playLottie = this.playLottie.bind(this);
   }
     componentDidMount(){
-        this.animation.reset()
+        // this.animation.reset()
+       
+        //TODO: start animation from a later point and pause the video there
     }
   
     playLottie = () => {
+        this.setState({
+            pauseLottie: 1
+        })
         this.animation.play()
     }
     
@@ -43,6 +48,7 @@ export default class LingoCard extends Component {
                 loop={false}
                 progress={100}
                 cacheStrategy={'weak'}
+                speed={this.state.pauseLottie}
                 />
 
                 
