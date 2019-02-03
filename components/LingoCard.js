@@ -24,8 +24,13 @@ export default class LingoCard extends Component {
 		return(
 			<TouchableOpacity onPress={this.playLottie}
             style={[styles.lingoCard,{backgroundColor:`${this.props.backColor}`}]} >
-            <View style={{ flexDirection:'row',flex:1, justifyContent:'center', alignItems:'center'}}>
+            <View style={styles.textView}>
+
+            <View style={{flexDirection:'column', flex:0.7}}>
             <Text style={styles.TextStyle}>{this.props.title}</Text>
+            <Text style={styles.CaptionStyle}>7 days</Text>
+            </View>
+
             <LottieView
                 ref={
                     animation => {
@@ -49,12 +54,24 @@ export default class LingoCard extends Component {
 }
 
 const styles = {
+    textView: {
+        flexDirection:'row',
+        flex:1,
+        paddingLeft:'10%',
+        justifyContent:'center', 
+        alignItems:'center'
+    },
+    CaptionStyle: {
+        fontSize: 14,
+        fontWeight: '300',
+        color:'#a5a5a5',
+        textAlign: 'left'
+    },
     TextStyle: {
-        fontSize: 25,
+        fontSize: 20,
         fontWeight: 'bold',
-        flex:0.5,
         color:'#fff',
-        textAlign:'right'
+        textAlign:'left'
     },
     lingoCard: {
     flex:1,
@@ -70,8 +87,8 @@ const styles = {
    paddingTop:"23%", 
    paddingBottom:"23%",
    margin: '1%',
-   marginRight: "10%",
-   marginLeft: '10%'
+   marginRight: "5%",
+   marginLeft: '5%'
    
 
 }
