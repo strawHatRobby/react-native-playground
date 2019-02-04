@@ -24,9 +24,9 @@ export default class Banner extends Component {
   renderPage(image, index) {
     return (
         <View key={index}>
-            <ImageBackground style={{ backgroundColor: 'black',borderRadius:5, marginTop:'2%', marginBottom:'2%',width: BannerWidth, height: BannerHeight }} source={{ uri: image }} >
+            <ImageBackground style={{ backgroundColor: 'black',borderRadius:5, marginBottom:'2%',width: BannerWidth, height: 200 }} source={{ uri: image }} >
             <View style={{flex:1, flexDirection: 'column', justifyContent:'flex-start', alignItems:'center'}}>
-                <Text style={{textAlign:'center', fontSize:40, color:'#fff', marginTop:'5%', marginBottom:'5%'}}>Alacrity</Text>
+                <Text style={{textAlign:'center', fontSize:40, color:'#fff', marginTop:'2%', marginBottom:'0.5%'}}>Alacrity</Text>
                 <Text style={{textAlign:'center', fontSize:15, color:'#fff',  marginHorizontal:'10%'}}>
 Someone with alacrity shows cheerful willingness and eager behavior, like a kid whose mother has told him he can buy anything in a candy store.
 </Text>
