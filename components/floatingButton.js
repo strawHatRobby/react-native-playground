@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
     TouchableOpacityStyle: {
         zIndex: 2,
         position: 'absolute',
-        width: "15%",
-        height: "15%",
+        width: "16%",
+        height: "16%",
         alignItems: 'center',
         justifyContent: 'center',
-        right: 20,
-        bottom: 40,
+        right: '5.5%',
+        bottom: '0%'
      },
      FloatingButtonStyle: {
       resizeMode: 'contain',

@@ -10,7 +10,8 @@ export default class LingoCard extends Component {
     super(props);
     
     this.state = {
-        pauseLottie: 0
+        pauseLottie: 0,
+        buttonPressed: false
     }
    this.playLottie = this.playLottie.bind(this);
   }
@@ -27,9 +28,11 @@ export default class LingoCard extends Component {
          await soundObject.playAsync();
         // Your sound is playing!
         } catch (error) {
+            console.log("Couldn't play sound cause of " + error)
         // An error occurred!
         }
     }
+
     playLottie = () => {
         this.setState({
             pauseLottie: 1
@@ -43,8 +46,24 @@ export default class LingoCard extends Component {
     
 	render(){
 		return(
-			<TouchableOpacity onPress={this.playLottie}
-            style={[styles.lingoCard,{backgroundColor:`${this.props.backColor}`}]} >
+            <TouchableOpacity onPress={this.playLottie}
+
+            onPressIn={() => { this.setState({
+                buttonPressed: true
+            })}}
+            onPressOut={() => { this.setState({
+                buttonPressed: false
+            })
+            setTimeout(() => {
+                this.playSound()
+            },900)
+        }
+            
+        }
+
+            style={[styles.lingoCard,{backgroundColor:`${this.props.backColor}`},(this.state.buttonPressed) ? {boderWidth:0, borderColor:`${this.props.backColor}`}: {borderWidth:2}]}
+               activeOpacity={1} 
+            >
             <View style={styles.textView}>
 
             <View style={{flexDirection:'column', flex:0.7}}>
