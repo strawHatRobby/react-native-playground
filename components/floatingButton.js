@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         right: 20,
         bottom: 40,
-        
      },
      FloatingButtonStyle: {
       resizeMode: 'contain',
