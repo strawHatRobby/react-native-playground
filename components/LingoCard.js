@@ -61,7 +61,7 @@ export default class LingoCard extends Component {
             
         }
 
-            style={[styles.lingoCard,{backgroundColor:`${this.props.backColor}`},(this.state.buttonPressed) ? {boderWidth:0, borderColor:`${this.props.backColor}`}: {borderWidth:2}]}
+            style={[styles.lingoCard,{backgroundColor:`${this.props.backColor}`},(this.state.buttonPressed) ? {boderWidth:0, borderColor:`#fff`}: {borderWidth:2}]}
                activeOpacity={1} 
             >
             <View style={styles.textView}>
