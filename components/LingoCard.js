@@ -54,9 +54,6 @@ export default class LingoCard extends Component {
             onPressOut={() => { this.setState({
                 buttonPressed: false
             })
-            setTimeout(() => {
-                this.playSound()
-            },900)
         }
             
         }
