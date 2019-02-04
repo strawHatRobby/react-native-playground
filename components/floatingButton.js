@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native';
 
+
 export default class FloatingButton extends Component {
     
     constructor(props){
@@ -18,9 +19,9 @@ export default class FloatingButton extends Component {
           onPress={this.clickHandler}
           style={styles.TouchableOpacityStyle}>
           <Image
-             source={{
-uri:'http://aboutreact.com/wp-content/uploads/2018/08/bc72de57b000a7037294b53d34c2cbd1.png',
-            }}
+             source={
+                require('../assets/chatDuo.png')
+            }
             style={styles.FloatingButtonStyle}
           />
         </TouchableOpacity>
@@ -33,8 +34,8 @@ const styles = StyleSheet.create({
     TouchableOpacityStyle: {
         zIndex: 2,
         position: 'absolute',
-        width: 50,
-        height: 50,
+        width: "15%",
+        height: "15%",
         alignItems: 'center',
         justifyContent: 'center',
         right: 20,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
      },
      FloatingButtonStyle: {
       resizeMode: 'contain',
-      width: 50,
-      height: 50,
+      width: "100%",
+      height: "100%",
     },
 })

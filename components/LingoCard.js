@@ -49,7 +49,7 @@ export default class LingoCard extends Component {
 
             <View style={{flexDirection:'column', flex:0.7}}>
             <Text style={styles.TextStyle}>{this.props.title}</Text>
-            <Text style={styles.CaptionStyle}>7 days</Text>
+            <Text style={[styles.CaptionStyle, {color:`${this.props.captionColor}`}]}>7 days</Text>
             </View>
 
             <LottieView
