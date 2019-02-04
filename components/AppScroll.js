@@ -3,6 +3,7 @@ import { StyleSheet, Text, ScrollView, Image, View, TouchableOpacity } from 'rea
 import LingoCard from './LingoCard';
 import LottieView from 'lottie-react-native';
 import Banner from './banner';
+import ScrollHeader from './ScrollHeader';
 
 export default class AppScroll extends Component {
     
@@ -19,9 +20,7 @@ export default class AppScroll extends Component {
             stickyHeaderIndices={[0]}
             showsVerticalScrollIndicator={false}
            >
-           <View style={{flex:1.2,backgroundColor:'#fff', borderBottomWidth:1, borderColor: '#d6d7da', flexDirection:'row'}}>
-                  <Text style={{textAlign:'center', fontSize:50}}>Angrezi.life</Text>
-           </View>
+           <ScrollHeader/>
            <Banner/>
             <LingoCard title={"Story"} backColor={"#7AC70C"} captionColor={"#BFF199"}/>
             <LingoCard title={"Test"} backColor={"#1CB0F6"} captionColor={"#BCE9FF"}/>
