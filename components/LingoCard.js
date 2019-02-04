@@ -3,10 +3,12 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, Touchable } from 'reac
 import LottieView from 'lottie-react-native';
 import * as animation from '../assets/rocekt.json';
 
+
 export default class LingoCard extends Component {
     
     constructor(props){
     super(props);
+    
     this.state = {
         pauseLottie: 0
     }
@@ -14,14 +16,28 @@ export default class LingoCard extends Component {
   }
     componentDidMount(){
         // this.animation.reset()
-       
+        
         //TODO: start animation from a later point and pause the video there
     }
   
+    async playSound() {
+        const soundObject = new Expo.Audio.Sound();
+        try {
+         await soundObject.loadAsync(require('../assets/flySound.mp3'));
+         await soundObject.playAsync();
+        // Your sound is playing!
+        } catch (error) {
+        // An error occurred!
+        }
+    }
     playLottie = () => {
         this.setState({
             pauseLottie: 1
         })
+        setTimeout(() => {
+            this.playSound()
+        },900)
+        
         this.animation.play()
     }
     
