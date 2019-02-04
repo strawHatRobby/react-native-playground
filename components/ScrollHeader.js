@@ -12,9 +12,26 @@ export default class ScrollHeader extends Component {
     
 	render(){
 		return(
-			<View style={{ justifyContent:'center', alignItems:'center', flex:1.2,backgroundColor:'#fff', borderBottomWidth:3, borderColor: '#d6d7da', flexDirection:'row'}}>
-                  <Text style={{textAlign:'center', fontSize:50}}>Angrezi.life</Text>
+			<View style={style.headerStyle}>
+                  <Text style={style.headerText}>Angrezi.life</Text>
            </View>
 			)
 	}
 }
+
+
+const style = StyleSheet.create({
+  headerStyle : {
+    justifyContent:'center',
+    alignItems:'center',
+    flex:1,
+    backgroundColor:'#fff',
+    borderBottomWidth:3, 
+    borderColor: '#d6d7da',
+    flexDirection:'row'
+  },
+  headerText: {
+    textAlign:'center', 
+    fontSize:25
+  }
+})
