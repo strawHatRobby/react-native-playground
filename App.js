@@ -7,6 +7,7 @@ import posed from 'react-native-pose';
 
 //Personal components and libraries
 import MainScreen from './screens/MainScreen.js'
+import NavigationView from './components/NavigationView'
 
 //try out libraries
 
@@ -21,7 +22,7 @@ export default class App extends React.Component {
   render() {
     return (
        <View style={{paddingTop:StatusBar.currentHeight, flex:1}}>
-      <MainScreen/>
+      <NavigationView/>
       </View>
 
     );
