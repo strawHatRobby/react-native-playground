@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { ListItem } from 'react-native-elements';
+
 
 export default class Dummy extends Component {
     
@@ -13,7 +15,7 @@ export default class Dummy extends Component {
 	render(){
 		return(
 			<View style={{flex:1}}>
-				<Text>This is just a text</Text>
+
 			</View>
 			)
 	}
